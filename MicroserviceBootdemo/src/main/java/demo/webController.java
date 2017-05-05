@@ -12,6 +12,6 @@ public class webController {
 	@RequestMapping("/hi/{name}")
 	public String message(Map model, @PathVariable String name) {
 		model.put("name", name);
-		return "home";
+		return "jsphome";
 	}
 }
