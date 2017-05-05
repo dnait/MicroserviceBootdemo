@@ -1,19 +1,17 @@
 package demo;
 
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.PostConstruct;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import demo.domain.PlayerDAO;
 import demo.domain.TeamDAO;
 
-@Controller
+@RestController
 public class webController {
 	
 	private TeamDAO team;
@@ -28,7 +26,7 @@ public class webController {
 	}
 	
 	@RequestMapping("/hi")
-	public @ResponseBody TeamDAO message() {
+	public TeamDAO message() {
 		return team;
 	}
 }
