@@ -5,17 +5,17 @@ import java.util.Set;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class TeamDAO {
+public class Team {
 	String name;
 	String location;
 	String mascotte;
-	Set<PlayerDAO> players;
+	Set<Player> players;
 	
-	public TeamDAO() {
+	public Team() {
 		super();
 	}
 
-	public TeamDAO(String location, String name, Set<PlayerDAO> players) {
+	public Team(String location, String name, Set<Player> players) {
 		this();
 		this.location = location;
 		this.name = name;
@@ -39,10 +39,10 @@ public class TeamDAO {
 	public void setMascotte(String mascotte) {
 		this.mascotte = mascotte;
 	}
-	public Set<PlayerDAO> getPlayers() {
+	public Set<Player> getPlayers() {
 		return players;
 	}
-	public void setPlayers(Set<PlayerDAO> players) {
+	public void setPlayers(Set<Player> players) {
 		this.players = players;
 	}
 }

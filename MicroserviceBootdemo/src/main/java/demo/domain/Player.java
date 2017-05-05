@@ -1,13 +1,13 @@
 package demo.domain;
 
-public class PlayerDAO {
+public class Player {
 	String name;
 	String position;
 	
-	public PlayerDAO() {
+	public Player() {
 		super();
 	}	
-	public PlayerDAO(String name, String position) {
+	public Player(String name, String position) {
 		this();
 		this.name = name;
 		this.position = position;

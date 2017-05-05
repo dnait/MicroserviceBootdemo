@@ -8,25 +8,25 @@ import javax.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import demo.domain.PlayerDAO;
-import demo.domain.TeamDAO;
+import demo.domain.Player;
+import demo.domain.Team;
 
 @RestController
 public class webController {
 	
-	private TeamDAO team;
+	private Team team;
 	
 	@PostConstruct
 	public void init() {
-		Set<PlayerDAO> players = new HashSet<>();
-		players.add(new PlayerDAO("Charlie","Pitcher"));
-		players.add(new PlayerDAO("Snoopy", "shortstop"));
+		Set<Player> players = new HashSet<>();
+		players.add(new Player("Charlie","Pitcher"));
+		players.add(new Player("Snoopy", "shortstop"));
 		
-		team = new TeamDAO("California", "Peanuts", players);
+		team = new Team("California", "Peanuts", players);
 	}
 	
 	@RequestMapping("/hi")
-	public TeamDAO message() {
+	public Team message() {
 		return team;
 	}
 }
