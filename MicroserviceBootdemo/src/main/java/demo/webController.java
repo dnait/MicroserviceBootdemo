@@ -13,7 +13,7 @@ public class webController {
 	
 	@Autowired TeamDao teamDao;
 	
-	@RequestMapping("/teams/{name}")
+	@RequestMapping("/hi/{name}")
 	public Team message(@PathVariable String name) {
 		return teamDao.findByName(name);
 	}
